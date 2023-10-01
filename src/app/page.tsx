@@ -108,7 +108,7 @@ export default function Home() {
       setTimeout(() => {
         window.open("https://chat.whatsapp.com/GGXEVUKPtyqKgq5y7DzgsE", "_blank")
       }, 750);
-      setTimeout(() => router.push("/eng"), 1000);
+      setTimeout(() => router.push("/welcome"), 1000);
     }
   }, [counter, complete])
 
@@ -190,7 +190,7 @@ export default function Home() {
               />
               <p className="text-[64px] font-bold text-center mt-4">{counter}</p>
               <p className="mt-4 text-lg font-bold mb-2 text-center">WhatsApp Grubuna Yönlendiriliyorsunuz</p>
-              <p className="text-sm max-w-[300px] text-center">Topluluk Etkinlikleri ve Duyurukarı WhatsApp Gruplarımızdan Yapılacaktır.</p>
+              <p className="text-sm max-w-[300px] text-center">Topluluk Etkinlikleri ve Duyuruları WhatsApp Gruplarından Yapılacaktır.</p>
               </div>
             </Box>
           ) :
@@ -205,7 +205,9 @@ export default function Home() {
                   <button onClick={() => {
                     setComplete(true);
                   }} className="py-2 w-full max-w-xs bg-green-600 rounded-lg text-white">WhatsApp Grubuna Gir</button>
-                  <button className="py-2 w-full max-w-xs bg-yellow-500 rounded-lg text-white">Sertifika Sayfasına Git</button>
+                  <button onClick={() => {
+                    router.push("/eng/welcome")
+                  }} className="py-2 w-full max-w-xs bg-yellow-500 rounded-lg text-white">Sertifika Sayfasına Git</button>
                   <button onClick={() => {
                     setLoading(false);
                     setUserExist(false);
