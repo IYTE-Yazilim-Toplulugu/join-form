@@ -147,17 +147,17 @@ export default function Home() {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title">
-            Yazılım Topluluğu
+            Software Society
           </Typography>
           <Typography id="modal-modal-title" variant="h4" component="h2">
-            KVKK Metni
+            KVKK Text
           </Typography>
           
           <div dangerouslySetInnerHTML={{ __html: data.kvkk_eng }} className="mt-4 h-[55vh] border-[1px] p-2 border-black rounded-lg overflow-y-scroll"></div>
-          
+
 
           <div className="flex justify-end">
-            <button type="button" onClick={() => setKvkk(false)} className="p-2 bg-orange-400 text-white rounded-xl mt-5">Okudum</button>
+            <button type="button" onClick={() => setKvkk(false)} className="p-2 bg-orange-400 text-white rounded-xl mt-5 px-6">OK</button>
           </div>
         </Box>
       </Modal>
