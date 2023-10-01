@@ -37,7 +37,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [complete, setComplete] = useState(false);
   const [counter, setCounter] = useState(7);
-  
+
   const handleClose = () => {
     setIsOpen(false);
     setKvkk(false);
@@ -50,14 +50,14 @@ export default function Home() {
     setLoading(true);
 
     const formData = new FormData(event.currentTarget);
-    
+
     const school_number = formData.get("school_number");
     const name = formData.get("name");
     const phone = formData.get("phone");
     const email = formData.get("email");
     const department = formData.get("department");
     const school = "İzmir Yüksek Teknoloji Enstitüsü";
-    
+
 
     await axios.post("http://localhost:5000/api/members/newMember", {
       "school_number": school_number,
@@ -67,18 +67,18 @@ export default function Home() {
       "department": department,
       "school": school
     })
-    .then((res) => {
-      console.log(res);
-      console.log(res.status);
+      .then((res) => {
+        console.log(res);
+        console.log(res.status);
 
-      setTimeout(() => {
-        setComplete(true);
-      }, 1500);
-    })
-    .catch((err) => {
-      console.log(err);
-      alert(err.message);
-    });
+        setTimeout(() => {
+          setComplete(true);
+        }, 1500);
+      })
+      .catch((err) => {
+        console.log(err);
+        alert(err.message);
+      });
   }
 
   useEffect(() => {
@@ -129,8 +129,8 @@ export default function Home() {
           <Typography id="modal-modal-title" variant="h4" component="h2">
             Community Guidelines
           </Typography>
-          
-          <div dangerouslySetInnerHTML={{ __html: data. rules_eng }} className="mt-4 h-[55vh] border-[1px] p-2 border-black rounded-lg overflow-y-scroll"></div>
+
+          <div dangerouslySetInnerHTML={{ __html: data.rules_eng }} className="mt-4 h-[55vh] border-[1px] p-2 border-black rounded-lg overflow-y-scroll"></div>
 
           <div className="flex justify-end">
             <button type="button" onClick={() => setIsOpen(false)} className="p-2 bg-orange-400 text-white rounded-xl mt-5 px-6">OK</button>
@@ -152,7 +152,7 @@ export default function Home() {
           <Typography id="modal-modal-title" variant="h4" component="h2">
             KVKK Text
           </Typography>
-          
+
           <div dangerouslySetInnerHTML={{ __html: data.kvkk_eng }} className="mt-4 h-[55vh] border-[1px] p-2 border-black rounded-lg overflow-y-scroll"></div>
 
 
@@ -169,44 +169,44 @@ export default function Home() {
         aria-describedby="modal-modal-description"
       >
         {
-          complete ? 
-          (
-            <Box sx={style}>
-              <div className="flex flex-col justify-center items-center px-4">
-              <CirclesWithBar
-                height="90"
-                width="90"
-                color="#4dc247"
-                wrapperStyle={{}}
-                wrapperClass=""
-                visible={true}
-                outerCircleColor=""
-                innerCircleColor=""
-                barColor=""
-                ariaLabel='circles-with-bar-loading'
-              />
-              <p className="text-[64px] font-bold text-center mt-4">{counter}</p>
-              <p className="mt-4 text-lg font-bold mb-2 text-center">WhatsApp Grubuna Yönlendiriliyorsunuz</p>
-              <p className="text-sm max-w-[300px] text-center">Topluluk Etkinlikleri ve Duyurukarı WhatsApp Gruplarımızdan Yapılacaktır.</p>
-              </div>
-            </Box>
-          ) :
-          (
-            <Box sx={style}>
-              <div className="flex flex-col justify-center items-center px-4">
-              <Grid
-                height="90"
-                width="90"
-                color="#FEA236"
-                wrapperStyle={{}}
-                wrapperClass=""
-                visible={true}
-                ariaLabel='circles-with-bar-loading'
-              />
-              <p className="mt-6">Kayıt Olma İşlemi Sürüyor</p>
-              </div>
-            </Box>
-          )
+          complete ?
+            (
+              <Box sx={style}>
+                <div className="flex flex-col justify-center items-center px-4">
+                  <CirclesWithBar
+                    height="90"
+                    width="90"
+                    color="#4dc247"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                    outerCircleColor=""
+                    innerCircleColor=""
+                    barColor=""
+                    ariaLabel='circles-with-bar-loading'
+                  />
+                  <p className="text-[64px] font-bold text-center mt-4">{counter}</p>
+                  <p className="mt-4 text-lg font-bold mb-2 text-center">WhatsApp Grubuna Yönlendiriliyorsunuz</p>
+                  <p className="text-sm max-w-[300px] text-center">Topluluk Etkinlikleri ve Duyurukarı WhatsApp Gruplarımızdan Yapılacaktır.</p>
+                </div>
+              </Box>
+            ) :
+            (
+              <Box sx={style}>
+                <div className="flex flex-col justify-center items-center px-4">
+                  <Grid
+                    height="90"
+                    width="90"
+                    color="#FEA236"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                    ariaLabel='circles-with-bar-loading'
+                  />
+                  <p className="mt-6">Kayıt Olma İşlemi Sürüyor</p>
+                </div>
+              </Box>
+            )
         }
       </Modal>
 
@@ -215,9 +215,9 @@ export default function Home() {
       <div className='flex flex-col px-8 text-black'>
         <form onSubmit={onSubmit} className='flex flex-col gap-4 -mt-16'>
           <input required type="number" name="school_number" placeholder='Student ID (i.e. 210201042)' className='inputStyle' />
-          
+
           <input required type="text" name="name" placeholder='Your Full Name' className='inputStyle' />
-          
+
           <input required type="tel" name="phone" placeholder='Your Phone Number' className='inputStyle ' />
 
           <input required type="email" name="email" placeholder='Email' className='inputStyle ' />
@@ -253,7 +253,7 @@ export default function Home() {
             <input required type="checkbox" name="" className="w-5" />
             <p>I read and accept the<span onClick={() => setKvkk(true)} className="underline text-blue-500 ml-2 cursor-pointer">KVKK text</span></p>
           </div>
-          
+
           <div className='flex justify-between items-center mt-4'>
             <h2 className='text-4xl font-bold'>Sign Up</h2>
             <button type="submit" className='p-5 bg-orange-600 rounded-full'><ArrowForwardIcon sx={{ color: "white" }} /></button>
@@ -262,7 +262,7 @@ export default function Home() {
 
         <a href="https://www.instagram.com/iyte_yazilim/" target="_blank" className="insta cursor-pointer p-4 rounded-lg flex justify-between items-center shadow-md shadow-black/20 mt-24 mb-3">
           <div className="flex justify-start items-center text-white gap-2">
-            <InstagramIcon sx={{ fontSize: "36px"}} />
+            <InstagramIcon sx={{ fontSize: "36px" }} />
             <p className="font-bold">Instagram</p>
           </div>
           <div className="flex justify-end items-center text-white gap-2">
@@ -273,7 +273,7 @@ export default function Home() {
 
         <a href="https://iyteyazilim.com/" target="_blank" className="website cursor-pointer p-4 rounded-lg flex justify-between items-center shadow-md shadow-black/20 mb-10">
           <div className="flex justify-start items-center text-white gap-2">
-            <LanguageIcon sx={{ fontSize: "36px"}} />
+            <LanguageIcon sx={{ fontSize: "36px" }} />
             <p className="font-bold">Website</p>
           </div>
           <div className="flex justify-end items-center text-white gap-2">
@@ -283,7 +283,7 @@ export default function Home() {
         </a>
 
         <h2 className="font-bold text-lg mt-5">Encountered a problem?</h2>
-        
+
         <div className="mt-3 mb-10 relative z-0">
           <Accordion sx={{ position: "relative", zIndex: 0 }}>
             <AccordionSummary
@@ -295,8 +295,9 @@ export default function Home() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                Please contact our administrators using the link below.
+                <br />
+                <a href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -307,12 +308,14 @@ export default function Home() {
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
-              <Typography>I Couldn't Enter the WhatsApp Group</Typography>
+              <Typography>I Couldn't Join  the WhatsApp Group</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                Please try registering again with your information. The system will automatically add you to the WhatsApp group.
+                If the problem persists, please contact the administrators.
+                <br />
+                <a href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -327,8 +330,9 @@ export default function Home() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                Please contact our administrators using the link below.
+                <br />
+                <a href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -343,8 +347,10 @@ export default function Home() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                Try downloading the document and uploading it again.
+                If the issue persists, please contact the administrators.
+                <br />
+                <a href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -359,8 +365,8 @@ export default function Home() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                Your student number is written on your IYTE Student Card.
+                If you don't have a 9-digit student number, please contact the Student Affairs Office.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -375,8 +381,8 @@ export default function Home() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                Our Non-Institute Registration System is under construction.
+                You can become a member of the IYTE Software Community when the system is activated by following our Instagram account.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -391,8 +397,7 @@ export default function Home() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                Please write the department you entered through student placement.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -407,8 +412,9 @@ export default function Home() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                Our Non-Institute Registration System is under construction.
+                You can become a member of the IYTE Software Community when the system is activated by following our Instagram account.
+
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -417,6 +423,6 @@ export default function Home() {
 
         <p className="my-6 text-black/60 text-center text-sm">Copyright 2023 © Yazılım Topluluğu</p>
       </div>
-    </main>
+    </main >
   )
 }

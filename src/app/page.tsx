@@ -34,7 +34,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [complete, setComplete] = useState(false);
   const [counter, setCounter] = useState(7);
-  
+
   const handleClose = () => {
     setIsOpen(false);
     setKvkk(false);
@@ -63,14 +63,14 @@ export default function Home() {
     setLoading(true);
 
     const formData = new FormData(event.currentTarget);
-    
+
     const school_number = formData.get("school_number");
     const name = formData.get("name");
     const phone = formData.get("phone");
     const email = formData.get("email");
     const department = formData.get("department");
     const school = "İzmir Yüksek Teknoloji Enstitüsü";
-    
+
 
     await axios.post("http://localhost:5000/api/members/newMember", {
       "school_number": school_number,
@@ -80,18 +80,18 @@ export default function Home() {
       "department": department,
       "school": school
     })
-    .then((res) => {
-      console.log(res);
-      console.log(res.status);
+      .then((res) => {
+        console.log(res);
+        console.log(res.status);
 
-      setTimeout(() => {
-        setComplete(true);
-      }, 1500);
-    })
-    .catch((err) => {
-      console.log(err);
-      alert(err.message);
-    });
+        setTimeout(() => {
+          setComplete(true);
+        }, 1500);
+      })
+      .catch((err) => {
+        console.log(err);
+        alert(err.message);
+      });
   }
 
   useEffect(() => {
@@ -126,7 +126,7 @@ export default function Home() {
           <Typography id="modal-modal-title" variant="h4" component="h2">
             Topluluk Kuralları
           </Typography>
-          
+
           <div dangerouslySetInnerHTML={{ __html: data.rules }} className="mt-4 h-[55vh] text-sm border-[1px] p-2 border-black rounded-lg overflow-y-scroll"></div>
 
           <div className="flex justify-end">
@@ -149,7 +149,7 @@ export default function Home() {
           <Typography id="modal-modal-title" variant="h4" component="h2">
             KVKK Metni
           </Typography>
-          
+
           <div dangerouslySetInnerHTML={{ __html: data.kvkk }} className="mt-4 h-[55vh] border-[1px] p-2 border-black rounded-lg overflow-y-scroll"></div>
 
           <div className="flex justify-end">
@@ -166,44 +166,44 @@ export default function Home() {
         aria-describedby="modal-modal-description"
       >
         {
-          complete ? 
-          (
-            <Box sx={style}>
-              <div className="flex flex-col justify-center items-center px-4">
-              <CirclesWithBar
-                height="90"
-                width="90"
-                color="#4dc247"
-                wrapperStyle={{}}
-                wrapperClass=""
-                visible={true}
-                outerCircleColor=""
-                innerCircleColor=""
-                barColor=""
-                ariaLabel='circles-with-bar-loading'
-              />
-              <p className="text-[64px] font-bold text-center mt-4">{counter}</p>
-              <p className="mt-4 text-lg font-bold mb-2 text-center">WhatsApp Grubuna Yönlendiriliyorsunuz</p>
-              <p className="text-sm max-w-[300px] text-center">Topluluk Etkinlikleri ve Duyurukarı WhatsApp Gruplarımızdan Yapılacaktır.</p>
-              </div>
-            </Box>
-          ) :
-          (
-            <Box sx={style}>
-              <div className="flex flex-col justify-center items-center px-4">
-              <Grid
-                height="90"
-                width="90"
-                color="#FEA236"
-                wrapperStyle={{}}
-                wrapperClass=""
-                visible={true}
-                ariaLabel='circles-with-bar-loading'
-              />
-              <p className="mt-6">Kayıt Olma İşlemi Sürüyor</p>
-              </div>
-            </Box>
-          )
+          complete ?
+            (
+              <Box sx={style}>
+                <div className="flex flex-col justify-center items-center px-4">
+                  <CirclesWithBar
+                    height="90"
+                    width="90"
+                    color="#4dc247"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                    outerCircleColor=""
+                    innerCircleColor=""
+                    barColor=""
+                    ariaLabel='circles-with-bar-loading'
+                  />
+                  <p className="text-[64px] font-bold text-center mt-4">{counter}</p>
+                  <p className="mt-4 text-lg font-bold mb-2 text-center">WhatsApp Grubuna Yönlendiriliyorsunuz</p>
+                  <p className="text-sm max-w-[300px] text-center">Topluluk Etkinlikleri ve Duyurukarı WhatsApp Gruplarımızdan Yapılacaktır.</p>
+                </div>
+              </Box>
+            ) :
+            (
+              <Box sx={style}>
+                <div className="flex flex-col justify-center items-center px-4">
+                  <Grid
+                    height="90"
+                    width="90"
+                    color="#FEA236"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                    ariaLabel='circles-with-bar-loading'
+                  />
+                  <p className="mt-6">Kayıt Olma İşlemi Sürüyor</p>
+                </div>
+              </Box>
+            )
         }
       </Modal>
 
@@ -212,9 +212,9 @@ export default function Home() {
       <div className='flex flex-col px-8 text-black'>
         <form onSubmit={onSubmit} className='flex flex-col gap-4 -mt-16'>
           <input required type="number" name="school_number" placeholder='Okul Numaran (i.e. 210201042)' className='inputStyle' />
-          
+
           <input required type="text" name="name" placeholder='İsim Soyisim Giriniz' className='inputStyle' />
-          
+
           <input required type="tel" name="phone" placeholder='Telefon Numaranızı Giriniz' className='inputStyle ' />
 
           <input required type="email" name="email" placeholder='Emailinizi Giriniz' className='inputStyle ' />
@@ -250,7 +250,7 @@ export default function Home() {
             <input required type="checkbox" name="" className="w-5" />
             <p><span onClick={() => setKvkk(true)} className="underline text-blue-500 ml-2 cursor-pointer">KVKK metni</span>ni okudum, onaylıyorum</p>
           </div>
-          
+
           <div className='flex justify-between items-center mt-4'>
             <h2 className='text-4xl font-bold'>Üye Olun</h2>
             <button type="submit" className='p-5 bg-orange-600 rounded-full'><ArrowForwardIcon sx={{ color: "white" }} /></button>
@@ -259,7 +259,7 @@ export default function Home() {
 
         <a href="https://www.instagram.com/iyte_yazilim/" target="_blank" className="insta cursor-pointer p-4 rounded-lg flex justify-between items-center shadow-md shadow-black/20 mt-24 mb-3">
           <div className="flex justify-start items-center text-white gap-2">
-            <InstagramIcon sx={{ fontSize: "36px"}} />
+            <InstagramIcon sx={{ fontSize: "36px" }} />
             <p className="font-bold">Instagram</p>
           </div>
           <div className="flex justify-end items-center text-white gap-2">
@@ -270,7 +270,7 @@ export default function Home() {
 
         <a href="https://iyteyazilim.com/" target="_blank" className="website cursor-pointer p-4 rounded-lg flex justify-between items-center shadow-md shadow-black/20 mb-10">
           <div className="flex justify-start items-center text-white gap-2">
-            <LanguageIcon sx={{ fontSize: "36px"}} />
+            <LanguageIcon sx={{ fontSize: "36px" }} />
             <p className="font-bold">Websitemiz</p>
           </div>
           <div className="flex justify-end items-center text-white gap-2">
@@ -280,7 +280,7 @@ export default function Home() {
         </a>
 
         <h2 className="font-bold text-lg mt-5">Bir sorunla mı karşılaştınız?</h2>
-        
+
         <div className="mt-3 mb-10 relative z-0">
           <Accordion sx={{ position: "relative", zIndex: 0 }}>
             <AccordionSummary
@@ -292,9 +292,11 @@ export default function Home() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                Lütfen yöneticilerimizle aşağıdaki linkten iletişime geçiniz.
+                <br />
+                <a href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
               </Typography>
+
             </AccordionDetails>
           </Accordion>
 
@@ -308,8 +310,10 @@ export default function Home() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                Bilgilerinizle tekrar üye olmayı deneyiniz. Otomatik olarak sistem WhatsApp grubuna atacaktır.
+                Sorunun devam etmesi halinde yöneticilerle iletişime geçiniz.
+                <br />
+                <a href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -324,8 +328,9 @@ export default function Home() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                Lütfen yöneticilerimizle aşağıdaki linkten iletişime geçiniz.
+                <br />
+                <a href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -340,8 +345,10 @@ export default function Home() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                Belgeyi indirerek yüklemeyi deneyiniz.
+                Sorunun devam etmesi halinde yöneticilerle iletişime geçiniz.
+                <br />
+                <a href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -356,8 +363,7 @@ export default function Home() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                Okul numarası İYTE Öğrenci kartınız üzerinde yazmaktadır. 9 Haneli öğrenci numaranızın bulunmaması halinde Öğrenci İşlerine başvurunuz.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -372,8 +378,8 @@ export default function Home() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                Enstitü Dışı Kayıt Sistemimiz yapım aşamasındadır.
+                İnstagram hesabımızı takip ederek sistem aktifleştiği zaman siz de İYTE Yazılım Topluluğu Üyesi olabilirsiniz.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -388,8 +394,7 @@ export default function Home() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                Lütfen merkezi yerleştirme ile girdiğiniz bölümü yazınız.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -404,8 +409,8 @@ export default function Home() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                Enstitü Dışı Kayıt Sistemimiz yapım aşamasındadır.
+                İnstagram hesabımızı takip ederek sistem aktifleştiği zaman siz de İYTE Yazılım Topluluğu Üyesi olabilirsiniz.
               </Typography>
             </AccordionDetails>
           </Accordion>
