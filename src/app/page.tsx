@@ -196,6 +196,20 @@ export default function Home() {
             <option value="Elektronik ve Haberleşme Mühendisliği">Elektronik ve Haberleşme Mühendisliği</option>
             <option value="İnşaat Mühendisliği">İnşaat Mühendisliği</option>
             <option value="Makine Mühendisliği">Makine Mühendisliği</option>
+            <option value="Biyomühendislik">Biyomühendislik</option>
+            <option value="Çevre Mühendisliği">Çevre Mühendisliği</option>
+            <option value="Enerji Sistemleri Mühendisliği">Enerji Sistemleri Mühendisliği</option>
+            <option value="Gıda Mühendisliği">Gıda Mühendisliği</option>
+            <option value="Kimya Mühendisliği">Kimya Mühendisliği</option>
+            <option value="Malzeme Bilimi ve Mühendisliği">Malzeme Bilimi ve Mühendisliği</option>
+            <option value="Fizik">Fizik</option>
+            <option value="Fotonik">Fotonik</option>
+            <option value="Fotonik">Kimya</option>
+            <option value="Matematik">Matematik</option>
+            <option value="Moleküler Biyoloji ve Genetik">Moleküler Biyoloji ve Genetik</option>
+            <option value="Endüstriyel Tasarım">Endüstriyel Tasarım</option>
+            <option value="Mimarlık">Mimarlık</option>
+            <option value="Şehir ve Bölge Planlama">Şehir ve Bölge Planlama</option>
           </select>
 
           <div className="w-full flex justify-start items-center mt-4">

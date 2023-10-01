@@ -69,16 +69,16 @@ export default function Home() {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h8" component="h2">
-            Yazılım Topluluğu
+            Software Society
           </Typography>
           <Typography id="modal-modal-title" variant="h4" component="h2">
-            Topluluk Kuralları
+            Community Guidelines
           </Typography>
           
-          <div dangerouslySetInnerHTML={{ __html: data.rules }} className="mt-4 h-[55vh] border-[1px] p-2 border-black rounded-lg overflow-y-scroll"></div>
+          <div dangerouslySetInnerHTML={{ __html: data. rules_eng }} className="mt-4 h-[55vh] border-[1px] p-2 border-black rounded-lg overflow-y-scroll"></div>
 
           <div className="flex justify-end">
-            <button type="button" onClick={() => setIsOpen(false)} className="p-2 bg-orange-400 text-white rounded-xl mt-5">Okudum</button>
+            <button type="button" onClick={() => setIsOpen(false)} className="p-2 bg-orange-400 text-white rounded-xl mt-5 px-6">OK</button>
           </div>
         </Box>
       </Modal>
@@ -119,25 +119,39 @@ export default function Home() {
           <input required type="email" name="email" placeholder='Email' className='inputStyle ' />
 
           <select name="bolum" required className='inputStyle  bg-white'>
-            <option disabled selected hidden>--Your Department--</option>
-            <option value="Bilgisayar Mühendisliği">Bilgisayar Mühendisliği</option>
-            <option value="Elektronik ve Haberleşme Mühendisliği">Elektronik ve Haberleşme Mühendisliği</option>
-            <option value="İnşaat Mühendisliği">İnşaat Mühendisliği</option>
-            <option value="Makine Mühendisliği">Makine Mühendisliği</option>
+          <option disabled selected hidden>--Department You Studied/Completed--</option>
+            <option value="Bilgisayar Mühendisliği">Computer Engineering</option>
+            <option value="Elektronik ve Haberleşme Mühendisliği">Electronics and Communication Engineering</option>
+            <option value="İnşaat Mühendisliği">Civil Engineering</option>
+            <option value="Makine Mühendisliği">Mechanical Engineering</option>
+            <option value="Biyomühendislik">Bioengineering</option>
+            <option value="Çevre Mühendisliği">Environmental Engineering</option>
+            <option value="Enerji Sistemleri Mühendisliği">Energy systems Engineering</option>
+            <option value="Gıda Mühendisliği">Food Engineering</option>
+            <option value="Kimya Mühendisliği">Chemical Engineering</option>
+            <option value="Malzeme Bilimi ve Mühendisliği">Material science and Engineering</option>
+            <option value="Fizik">Physical</option>
+            <option value="Fotonik">Photonics</option>
+            <option value="Fotonik">Chemical</option>
+            <option value="Matematik">Maths</option>
+            <option value="Moleküler Biyoloji ve Genetik">Molecular Biology and Genetics</option>
+            <option value="Endüstriyel Tasarım">Industrial Design</option>
+            <option value="Mimarlık">Architecture</option>
+            <option value="Şehir ve Bölge Planlama">City and Region Planning</option>
           </select>
 
           <div className="w-full flex justify-start items-center mt-4">
             <input required type="checkbox" name="" className="w-5" />
-            <p><span onClick={() => setIsOpen(true)} className="underline text-blue-500 ml-2 cursor-pointer">Topluluk Kuralları</span>nı okudum, onaylıyorum</p>
+            <p>I read and accept the<span onClick={() => setIsOpen(true)} className="underline text-blue-500 ml-2 cursor-pointer">Community Guidelines</span></p>
           </div>
 
           <div className="w-full flex justify-start items-center -mt-3">
             <input required type="checkbox" name="" className="w-5" />
-            <p><span onClick={() => setKvkk(true)} className="underline text-blue-500 ml-2 cursor-pointer">KVKK metni</span>ni okudum, onaylıyorum</p>
+            <p>I read and accept the<span onClick={() => setKvkk(true)} className="underline text-blue-500 ml-2 cursor-pointer">KVKK text</span></p>
           </div>
           
           <div className='flex justify-between items-center mt-4'>
-            <h2 className='text-4xl font-bold'>Üye Olun</h2>
+            <h2 className='text-4xl font-bold'>Sign Up</h2>
             <button type="submit" className='p-5 bg-orange-600 rounded-full'><ArrowForwardIcon sx={{ color: "white" }} /></button>
           </div>
         </form>
@@ -156,7 +170,7 @@ export default function Home() {
         <a href="https://iyteyazilim.com/" target="_blank" className="website cursor-pointer p-4 rounded-lg flex justify-between items-center shadow-md shadow-black/20 mb-10">
           <div className="flex justify-start items-center text-white gap-2">
             <LanguageIcon sx={{ fontSize: "36px"}} />
-            <p className="font-bold">Websitemiz</p>
+            <p className="font-bold">Website</p>
           </div>
           <div className="flex justify-end items-center text-white gap-2">
             <p className="text-xs">iyteyazilim.com</p>
@@ -164,7 +178,7 @@ export default function Home() {
           </div>
         </a>
 
-        <h2 className="font-bold text-lg mt-5">Bir sorunla mı karşılaştınız?</h2>
+        <h2 className="font-bold text-lg mt-5">Encountered a problem?</h2>
         
         <div className="mt-3 mb-10 relative z-0">
           <Accordion sx={{ position: "relative", zIndex: 0 }}>
@@ -173,7 +187,7 @@ export default function Home() {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>Bilgilerimi Yanlış Girdim</Typography>
+              <Typography>I entered my information incorrectly</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -189,7 +203,7 @@ export default function Home() {
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
-              <Typography>WhatsApp Grubuna Giremedim</Typography>
+              <Typography>I Couldn't Enter the WhatsApp Group</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -205,7 +219,7 @@ export default function Home() {
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
-              <Typography>Genel Kurul Sertifikamı Alamadım</Typography>
+              <Typography>I Couldn't Receive My General Assembly Certificate</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -221,7 +235,7 @@ export default function Home() {
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
-              <Typography>Sertifikamı Linkedin'e Yükleyemedim</Typography>
+              <Typography>I Couldn't Upload My Certificate to Linkedin</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -237,7 +251,7 @@ export default function Home() {
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
-              <Typography>Okul Numaramı Bilmiyorum</Typography>
+              <Typography>I Don't Know My School Number</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -253,7 +267,7 @@ export default function Home() {
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
-              <Typography>İYTE Öğrencisi Değilim Nasıl Üye Olabilirim?</Typography>
+              <Typography>I am not an IYTE student, how can I become a member?</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -269,7 +283,7 @@ export default function Home() {
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
-              <Typography>Çift Ana Dal / Yan Dal Yapıyorum Bölüme Ne Yazacağım?</Typography>
+              <Typography>I am doing a double major / minor. What should I write in the department?</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -285,7 +299,7 @@ export default function Home() {
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
-              <Typography>Üniversite Öğrencisi Değilim, Üye Olabiliyor Muyum?</Typography>
+              <Typography>I am not a university student, can I become a member?</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
