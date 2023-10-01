@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from "react";
+import React, { FormEvent, useState, useEffect } from "react";
 import Image from 'next/image';
 
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -16,6 +16,8 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import LanguageIcon from '@mui/icons-material/Language';
 
+import { CirclesWithBar, Grid } from "react-loader-spinner";
+
 import bg from "../../assets/image/topEng.svg";
 
 
@@ -26,10 +28,15 @@ import Modal from '@mui/material/Modal';
 import data from "../data";
 import { useRouter } from "next/navigation";
 
+import axios from "axios";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [kvkk, setKvkk] = useState(false);
+
+  const [loading, setLoading] = useState(false);
+  const [complete, setComplete] = useState(false);
+  const [counter, setCounter] = useState(7);
   
   const handleClose = () => {
     setIsOpen(false);
@@ -37,6 +44,54 @@ export default function Home() {
   }
 
   const router = useRouter();
+
+  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setLoading(true);
+
+    const formData = new FormData(event.currentTarget);
+    
+    const school_number = formData.get("school_number");
+    const name = formData.get("name");
+    const phone = formData.get("phone");
+    const email = formData.get("email");
+    const department = formData.get("department");
+    const school = "İzmir Yüksek Teknoloji Enstitüsü";
+    
+
+    await axios.post("http://localhost:5000/api/members/newMember", {
+      "school_number": school_number,
+      "name": name,
+      "phone": phone,
+      "email": email,
+      "department": department,
+      "school": school
+    })
+    .then((res) => {
+      console.log(res);
+      console.log(res.status);
+
+      setTimeout(() => {
+        setComplete(true);
+      }, 1500);
+    })
+    .catch((err) => {
+      console.log(err);
+      alert(err.message);
+    });
+  }
+
+  useEffect(() => {
+    if (counter > 0 && complete) {
+      setTimeout(() => setCounter(counter - 1), 1000)
+    }
+    else if (counter == 0) {
+      setTimeout(() => {
+        window.open("https://chat.whatsapp.com/GGXEVUKPtyqKgq5y7DzgsE", "_blank")
+      }, 750);
+      setTimeout(() => router.push("/"), 1000);
+    }
+  }, [counter, complete])
 
   const style = {
     position: 'absolute',
@@ -68,7 +123,7 @@ export default function Home() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h8" component="h2">
+          <Typography id="modal-modal-title">
             Software Society
           </Typography>
           <Typography id="modal-modal-title" variant="h4" component="h2">
@@ -91,7 +146,7 @@ export default function Home() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h8" component="h2">
+          <Typography id="modal-modal-title">
             Yazılım Topluluğu
           </Typography>
           <Typography id="modal-modal-title" variant="h4" component="h2">
@@ -106,11 +161,59 @@ export default function Home() {
         </Box>
       </Modal>
 
-      <Image src={bg} className='w-full pointer-events-none' />
+      <Modal
+        open={loading}
+        // onClose={() => }
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        {
+          complete ? 
+          (
+            <Box sx={style}>
+              <div className="flex flex-col justify-center items-center px-4">
+              <CirclesWithBar
+                height="90"
+                width="90"
+                color="#4dc247"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+                outerCircleColor=""
+                innerCircleColor=""
+                barColor=""
+                ariaLabel='circles-with-bar-loading'
+              />
+              <p className="text-[64px] font-bold text-center mt-4">{counter}</p>
+              <p className="mt-4 text-lg font-bold mb-2 text-center">WhatsApp Grubuna Yönlendiriliyorsunuz</p>
+              <p className="text-sm max-w-[300px] text-center">Topluluk Etkinlikleri ve Duyurukarı WhatsApp Gruplarımızdan Yapılacaktır.</p>
+              </div>
+            </Box>
+          ) :
+          (
+            <Box sx={style}>
+              <div className="flex flex-col justify-center items-center px-4">
+              <Grid
+                height="90"
+                width="90"
+                color="#FEA236"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+                ariaLabel='circles-with-bar-loading'
+              />
+              <p className="mt-6">Kayıt Olma İşlemi Sürüyor</p>
+              </div>
+            </Box>
+          )
+        }
+      </Modal>
+
+      <Image src={bg} className='w-full pointer-events-none' alt="" />
 
       <div className='flex flex-col px-8 text-black'>
-        <form className='flex flex-col gap-4 -mt-16'>
-          <input required type="number" name="studentnumber" placeholder='Student ID (i.e. 210201042)' className='inputStyle' />
+        <form onSubmit={onSubmit} className='flex flex-col gap-4 -mt-16'>
+          <input required type="number" name="school_number" placeholder='Student ID (i.e. 210201042)' className='inputStyle' />
           
           <input required type="text" name="name" placeholder='Your Full Name' className='inputStyle' />
           
@@ -118,8 +221,8 @@ export default function Home() {
 
           <input required type="email" name="email" placeholder='Email' className='inputStyle ' />
 
-          <select name="bolum" required className='inputStyle  bg-white'>
-          <option disabled selected hidden>--Department You Studied/Completed--</option>
+          <select name="department" defaultValue="--Department You Studied/Completed--" required className='inputStyle  bg-white'>
+            <option disabled hidden>--Department You Studied/Completed--</option>
             <option value="Bilgisayar Mühendisliği">Computer Engineering</option>
             <option value="Elektronik ve Haberleşme Mühendisliği">Electronics and Communication Engineering</option>
             <option value="İnşaat Mühendisliği">Civil Engineering</option>

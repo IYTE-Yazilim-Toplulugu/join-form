@@ -18,6 +18,7 @@ import LanguageIcon from '@mui/icons-material/Language';
 
 import bg from "../assets/image/top.svg";
 
+import axios from "axios";
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -60,9 +61,37 @@ export default function Home() {
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setComplete(true);
-    }, 5000);
+
+    const formData = new FormData(event.currentTarget);
+    
+    const school_number = formData.get("school_number");
+    const name = formData.get("name");
+    const phone = formData.get("phone");
+    const email = formData.get("email");
+    const department = formData.get("department");
+    const school = "İzmir Yüksek Teknoloji Enstitüsü";
+    
+
+    await axios.post("http://localhost:5000/api/members/newMember", {
+      "school_number": school_number,
+      "name": name,
+      "phone": phone,
+      "email": email,
+      "department": department,
+      "school": school
+    })
+    .then((res) => {
+      console.log(res);
+      console.log(res.status);
+
+      setTimeout(() => {
+        setComplete(true);
+      }, 1500);
+    })
+    .catch((err) => {
+      console.log(err);
+      alert(err.message);
+    });
   }
 
   useEffect(() => {
@@ -182,7 +211,7 @@ export default function Home() {
 
       <div className='flex flex-col px-8 text-black'>
         <form onSubmit={onSubmit} className='flex flex-col gap-4 -mt-16'>
-          <input required type="number" name="studentnumber" placeholder='Okul Numaran (i.e. 210201042)' className='inputStyle' />
+          <input required type="number" name="school_number" placeholder='Okul Numaran (i.e. 210201042)' className='inputStyle' />
           
           <input required type="text" name="name" placeholder='İsim Soyisim Giriniz' className='inputStyle' />
           
@@ -190,8 +219,8 @@ export default function Home() {
 
           <input required type="email" name="email" placeholder='Emailinizi Giriniz' className='inputStyle ' />
 
-          <select name="bolum" required className='inputStyle  bg-white'>
-            <option disabled selected hidden>--Okuduğunuz/Bitirdiğiniz Bölüm--</option>
+          <select name="department" defaultValue="--Okuduğunuz/Bitirdiğiniz Bölüm--" required className='inputStyle  bg-white'>
+            <option disabled hidden>--Okuduğunuz/Bitirdiğiniz Bölüm--</option>
             <option value="Bilgisayar Mühendisliği">Bilgisayar Mühendisliği</option>
             <option value="Elektronik ve Haberleşme Mühendisliği">Elektronik ve Haberleşme Mühendisliği</option>
             <option value="İnşaat Mühendisliği">İnşaat Mühendisliği</option>
