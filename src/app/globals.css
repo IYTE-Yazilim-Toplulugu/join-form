@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: #0e2a47;
+  /* background-image: url("../assets/image/Meteor.svg"); */
+  /* background-repeat: no-repeat; */
+  background-size: contain;
+}
+
+.inputStyle {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+.inputStyle:focus {
+  
+  border-color: rgba(205, 89, 17, 0.848);
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6);
+  outline: 0 none;
+}
+
+.insta {
+  background: #f09433; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.website {
+  background: #33f0f0; 
+  background: -moz-linear-gradient(45deg, #33edf0 0%,#3cb6e6 25%,#278bdc 50%,#2353cc 75%,#8018bc 100%); 
+  background: -webkit-linear-gradient(45deg, #33edf0 0%,#3cb6e6 25%,#278bdc 50%,#2353cc 75%,#8018bc 100%); 
+  background: linear-gradient(45deg, #33edf0 0%,#3cb6e6 25%,#278bdc 50%,#2353cc 75%,#8018bc 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
