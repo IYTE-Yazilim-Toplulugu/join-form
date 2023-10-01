@@ -153,7 +153,8 @@ export default function Home() {
             KVKK Metni
           </Typography>
           
-          <div dangerouslySetInnerHTML={{ __html: data.kvkk }} className="mt-4 h-[55vh] border-[1px] p-2 border-black rounded-lg overflow-y-scroll"></div>
+          <div dangerouslySetInnerHTML={{ __html: data.kvkk_eng }} className="mt-4 h-[55vh] border-[1px] p-2 border-black rounded-lg overflow-y-scroll"></div>
+          
 
           <div className="flex justify-end">
             <button type="button" onClick={() => setKvkk(false)} className="p-2 bg-orange-400 text-white rounded-xl mt-5">Okudum</button>

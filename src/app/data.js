@@ -37,47 +37,78 @@ const data = {
 
 
     
-  "kvkk": `<p>
-    sdöaşsdşasd
-    sda
-    sdasdmasdmsaasdsa
-    slasmşlas
-    sdmalşsd
-    dalsmdaşs
-    asldmasşd
-    daşsdmaşsd
-    knfdlkfndslf
-    dfmsdfşsdmşfsdlmsa
-    dşlmasşdmasşldm
-    aidmsalmdşals
-    salmdaşlsdm
-    sdöaşsdşasd
-    sda
-    sdasdmasdmsaasdsa
-    slasmşlas
-    sdmalşsd
-    dalsmdaşs
-    asldmasşd
-    daşsdmaşsd
-    knfdlkfndslf
-    dfmsdfşsdmşfsdlmsa
-    dşlmasşdmasşldm
-    aidmsalmdşals
-    salmdaşlsdm
-    sdöaşsdşasd
-    sda
-    sdasdmasdmsaasdsa
-    slasmşlas
-    sdmalşsd
-    dalsmdaşs
-    asldmasşd
-    daşsdmaşsd
-    knfdlkfndslf
-    dfmsdfşsdmşfsdlmsa
-    dşlmasşdmasşldm
-    aidmsalmdşals
-    salmdaşlsdm
-  </p>`,
+    "kvkk": `<p><b>İYTE Yazılım Topluluğu</b> olarak, başta özel hayatın gizliliği olmak üzere, temel hak ve özgürlüklerin korunması amacıyla, kişisel verilerle ilgili düzenlenen <b>"Kişisel Verilerin Korunması Kanunu" </b> hususunda üyelerimiz, eğitmenlerimiz, bağışçılarımız ve ziyaretçilerimizi bilgilendirmek istiyoruz<br/><br/>
+    Amacımız; sizlerin memnuniyeti doğrultusunda, kişisel verilerinizin alınma şekilleri, işlenme amaçları, hukuki nedenleri ve haklarınız konularında sizi en şeffaf şekilde bilgilendirmektir. </br><br/>
+    7 Nisan 2016 tarihinde yürürlüğe giren <b>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK)</b> gereğince, üyelerimizin, etkinlik ve eğitim hizmetlerimizden  yararlanmak amacıyla , kişisel verilerini tarafımızla paylaşması halinde, İYTE Yazılım Topluluğu sıfatıyla, kişisel bilgileri kanunda açıklandığı çerçevede; elde edebilecek, kaydedebilecek, depolayabilecek, muhafaza edebilecek, hizmetlerini devam ettirebilmek amacıyla güncelleyebilecek, değiştirebilecek, yeniden düzenleyebilecek, mevzuatın izin verdiği durumlarda ve ölçüde üçüncü kişilere açıklayabilecek, devredebilecek, aktarabilecek, paylaşabilecek, sınıflandırabilecek, anonim hale getirebilecek ve kanunda sayılan diğer şekillerde işleyebilecektir.<br/><br/>
+    
+    <b>Kişisel verilerin tanımı</b><br/><br/>
+  
+    <b>İYTE Yazılım Topluluğu tarafından toplanan veya işlenen kişisel veriler;</b><br/><br/>
+    <b>İYTE Yazılım Topluluğu </b> tarafından sunulan etkinlik ve eğitim hizmetleri ve yürütülen etkinlik ve eğitim faaliyetleri kapsamında toplanan ve/veya işlenen Kişisel Veriler; üyelerimizin, eğitmenlerimizin, bağışçılarımızın, yan ve alt yüklenicilerimizin, tedarikçilerimizin ve bunların işçilerinin isim, soyisim, vesikalık fotoğrafı, T.C kimlik numarası, T.C kimlik kartındaki bilgiler / nüfus cüzdanındaki bilgiler, adresleri, telefon numaraları, okul numaraları, bölüm bilgileri, doğum tarihi vb bilgiler ile; Üyelerimizin ortaöğretim bilgileri, eğitim hayatı boyunca üyelerin yaptıkları proje ve ödevler, sunumlar, katıldıkları kulüp çalışmaları ve sosyal, sanatsal & sportif faaliyetler, topluluğun yürürlükte olan mevzuat kapsamında almak zorunda olduğu üyelerin sağlık durumu ile ilgili sağlık verileri, iletişim bilgileri, (adres, cep telefonu, telefon, e-posta adresi) vb bilgilerdir.</br></br>
+    
+    <b>Kişisel verilerinizin işlenme amaçları ve hukuki sebepleri;</b></br></br>
+    Türkiye Cumhuriyeti Milli Eğitim Bakanlığı mevzuatının gerekliliklerini yerine getirme ve enstitü kurallarına uygun olarak faaliyet gösterme amacı başta olmak üzere, üyelerimize eğitim ve öğretim hizmeti verilebilmesi, üyelik işlemlerinin yerine getirilmesi, insan kaynakları süreçlerinin yürütülmesi, etkinlik düzenleme prosedürlerinin sağlanmasını temin için doğru, güvenli, işler bir şekilde işletilmesi amacıyla, Eğitim ve etkinlik ile ilgili hizmetlerine dair işlemlerin yerine getirilmesi, yürütülmesi ve geliştirilebilmesi, bu hizmetlere ve ürünlere yönelik tanıtım, pazarlama ve kampanya faaliyetlerinin yapılması, akdettiğiniz ve/veya akdettiğimiz sözleşmelerin gereğinin yerine getirilmesi; istihbarat, bilgi araştırmaları yapılması,planlama, istatistik, üye memnuniyeti çalışmaları, güvenliğin sağlanması,  tarafınıza daha iyi ve güvenilir hizmet verilebilmesi ve bunun kesintisiz olarak sürdürebilmesi amacıyla kişisel verileriniz işlenmektedir.</br></br>
+   
+    Kişisel Verilerin, toplamasının hukuki sebebi, Türkiye Cumhuriyeti Kanunları, Milli Eğitim Bakanlığı mevzuatı kapsamında topluluk olarak hukuki yükümlülüklerini yerine getirmek, eğitim ve etkinlik faaliyetlerinin, bu faaliyetler kapsamında gerek üyeler, gerek eğitmenler, gerekse de yan yüklenici ve alt yüklenicileri ile kurduğu ve/veya kuracağı ilişkilerin devamının sağlanmasıdır. </br></br>
+  
+    <b>Kişisel verilerin toplanma yöntemi:</b></br></br>
+    <b>Kişisel verileriniz,</b></br></br>
+    Yönetim kurulu tarafından , topluluğa ön kayıt ve/veya kesin kayıt anında, topluluğun <b>www.iyteyazilim.com</b> isimli web sitesi, okulun web sitesi üzerinde gerek üyelerin, gerek eğitmenlerin kendilerine özel şifre ile giriş yaptığı alanlar, yıl içinde düzenlenen eğitim ve etkinler için doldurulan kayıt formları , üyelerin, eğitmenlerin, sponsorların ve bağışçıların topluluğa gönderdikleri e-postalar, mektuplar, yazışmalar, Üye Kayıt Sistemi), eğitim yönetim sistemi ,etkinlik yönetim sistemi isimleriyle kullanılan bilgisayar programları ve uygulamaları ile toplamaktadır.</br></br>
+    
+    <b>İYTE Yazılım Topluluğunun 3. kişilerden topladığı Kişisel Veriler;</b></br></br>
+    İYTE Yazılım Topluluğu olarak, bilgisayar programlarımızı/uygulamalarımızı yazan yazılım ekiplerinden, etkinliklere yemek ve temizlik hizmeti veren alt tedarikçilerimizden yukarıda saydığımız kişisel verilerinizin tamamını veya bir kısmını toplayabiliriz
+    Yukarıda belirtilen amaçlarla, kişisel verilerin aktarılabileceği kişi/kuruluşlar: Kişisel Verileriniz; Sponsorlar, Eğitmenler, Topluluk ve Enstitü yöneticileri olan diğer üçüncü kişilere; aktarılabilecektir.</br></br>
+  
+    <b>Kişisel Verilerin İYTE Yazılım Topluluğu tarafından Saklanması ve Güvenliğinin Temin Edilmesi ile Saklanma Süresi;</b></br></br>
+    Topluluk Kişisel Verilerinizin hukuka aykırı olarak işlenmesini önlemek, Kişisel Verilerinizi hukuka aykırı olarak erişilmesini önlemek, Kişisel Verilerinizin muhafazasını sağlamak, amacıyla gerekli güvenlik önlemlerini ve teknik, idari önlemleri alacaktır. T.C Kanunları ve Milli Eğitim Bakanlığı mevzuatı kapsamında işbu bilgilendirme metninde yer alan ve süresiz olarak saklanması gereken kişisel verileriniz süresiz olarak Topluluk tarafından saklanacaktır. Süresiz olarak saklanması gerekenler dışında kalan kişisel verileriniz öğrencinin Topluluk ’tan ayrılmasını takiben 1 (bir) yıl içinde imha edilecektir.</br></br>
+  
+    <b>Çerez politikası ve çerezler ile topladığımız kişisel veriler ve uygulamalar;</b></br></br>
+    İYTE Yazılım Topluluğu web sitesi olan <b>www.iyteyazilim.com</b> aracılığı ile sadece tarayıcınızın diline ilişkin bilgileri toplamaktadır. Bunun dışında kullandığımız çerezler ile halihazırda herhangi bir kişisel verinizi toplamıyoruz. Ancak kullanacağımız çerezlerin ileride değişiklik göstermesi halinde çerez politikamızın ve dolayısıyla aydınlatma yükümlülüğümüzün içeriğinin değişiklik gösterebileceğini belirtmek isteriz.</br></br>
+  
+    <b>Kanun’un 11. Maddesi Çerçevesinde Haklarınız;</b></br></br>
+    Topluluğa başvurarak; kişisel verilerinizin; <b>a)</b> işlenip işlenmediğini öğrenme, <b>b)</b> kişisel verileriniz işlenmişse buna ilişkin bilgi talep etme, <b>c)</b> kişisel verilerinizin işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme, <b>ç)</b> kişisel verilerinizin yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme, <b>d)</b> kişisel verilerinizin eksik veya yanlış işlenmiş ise düzeltilmesini isteme, <b>e)</b> Kanun’un 7. maddesinde öngörülen şartlar çerçevesinde kişisel verilerinizin silinmesini veya yok edilmesini isteme, <b>f)</b> kişisel verilerinizin aktarıldığı üçüncü kişilere yukarıda sayılan (d) ve (e) bentleri uyarınca yapılan işlemlerin bildirilmesini isteme, <b>g)</b> kişisel verilerinizin münhasıran otomatik sistemler ile analiz edilmesi nedeniyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme ve <b>h)</b> kişisel verilerinizin kanuna aykırı olarak işlenmesi sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme hakkına sahipsiniz.</br></br>
+    Haklarınızın, düzenlemenin yürürlük tarihi olan 07.10.2016 tarihinden itibaren kullanılması mümkün olup, taleplerinizin yerine getirilmesini teminen Topluluğumuzca yapılacak masrafları, KVKK’nın “Veri sorumlusuna başvuru” başlıklı 13. maddesinde belirtilen tarifeye göre tarafınızdan talep etme hakkımız saklıdır.</br></br>
+    Rıza Gerektirmeyen Haller, 6698 sayılı Kişisel Verilerin Korunması Kanunu’nun 5. Maddesinin 2. fıkrası uyarınca, kanunlarda açıkça öngörülmesi, bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması kaydıyla, sözleşmenin taraflarına ait kişisel verilerin işlenmesinin gerekli olması, veri sorumlusu İYTE Yazılım Topluluğu’nun hukuki yükümlülüğünü yerine getirebilmesi için zorunlu olması,  ilgili kişi tarafından alenileştirilmiş olması, bir hakkın tesisi, kullanılması veya korunması için veri işlemenin zorunlu olması, ilgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla veri sorumlusu olan İYTE Yazılım Topluluğu’nun  meşru menfaatleri için veri işlenmesinin zorunlu olması, hallerinde  Banka’nın açık rıza almaksızın kişisel verileri işleyebilme hakkı mevcuttur. Yayımlanan veya kamuya açıklanan ya da kanunlarda yer alan açıklık ilkesi uyarınca resmi sicillerde veya bilançolar ile faaliyet raporlarında yer alan veya kanunlardaki hükümler gereği kamunun aydınlatılması bakımından açıklamakla yükümlü olunan Veriler İYTE Yazılım Topluluğu tarafından tabi olduğu mevzuattan kaynaklanan kanuni yükümlülüklerinin yerine getirilmesi için ve/veya yasal zorunluluklar nedeniyle ve/veya kanunlarda sırları talep edebilecek kişilere Verilerin aktarılması yükümlülüğünün yerine getirilmesi için yapılacak Veri açıklama, kullanım ve aktarımlarının İYTE Yazılım Topluluğu’nun  sır saklama yükümlülüğüne tabi olmadığını ve bu Veriler için ayrıca bir muvafakatname alınmasına gerek kalmaksızın İYTE Yazılım Topluluğu, söz konusu Verileri ilgili kişilere açıklamaya, vermeye, işlemeye ve aktarmaya yetkilidir.<br></br>
+    <b>İYTE Yazılım Topluluğu </b> zaman zaman işbu Kişisel Verilerin Korunması ile ilgili aydınlatma yükümlülüğü kapsamında bu bilgilendirme yazısı içeriğini güncelleyebilir ve mevzuatta meydana gelecek değişiklikleri dikkate alarak ilave bilgilendirmeler yapabilir. Bu kapsamda zaman zaman web sitemizi ziyaret ederek Kişisel Verilerin Korunması Kanunu ile ilgili olarak hazırladığımız bilgilendirmeyi dikkatle okumanızı rica ve tavsiye ederiz.
+  
+  
+  
+    </p>
+      
+    </p>`,
+  
+    "kvkk_eng": `<p><b>İYTE Software Community</b> would like to inform our members, instructors, donors, and visitors about the "Law on the Protection of Personal Data," which is regulated to protect fundamental rights and freedoms, especially the privacy of private life.<br/><br/>
+  Our aim is to transparently inform you about how your personal data is collected, the purposes of processing, legal reasons, and your rights, all in line with your satisfaction. </br><br/>
+  In accordance with the Law on the Protection of Personal Data No. 6698, which came into effect on April 7, 2016, if our members share their personal data with us to benefit from our activities and educational services, as the İYTE Software Community, within the framework defined by the law; we may collect, record, store, preserve, update, change, rearrange, disclose to third parties to the extent permitted by the legislation and in cases, transfer, share, classify, anonymize, and process personal information in other ways specified by the law.<br/><br/>
+  
+  <b>Definition of Personal Data</b><br/><br/>
+  
+  <b>Personal data collected or processed by the İYTE Software Community;</b><br/><br/>
+  Personal data collected and/or processed within the scope of the activities and educational services provided by the İYTE Software Community include the names, surnames, ID photos, ID numbers, information on ID cards, addresses, phone numbers, school numbers, department information, date of birth, etc., of our members, instructors, donors, subcontractors, suppliers, and their employees. The personal data also includes information about the educational background of our members, projects and assignments they have completed during their education, presentations, club activities, and social, artistic & sports activities, as well as health data required by the current legislation on the health status of members.<br/><br/>
+  
+  <b>Purposes and legal reasons for processing your personal data;</b></br></br>
+  Personal data is processed for purposes such as complying with the requirements of the Turkish Ministry of National Education legislation, operating in accordance with institute rules, providing education and training services to our members, performing membership procedures, conducting human resources processes, ensuring the procedures for organizing events, and processing, performing and improving transactions related to education and events. This includes the promotion, marketing, and campaign activities related to these services and products, as well as fulfilling the obligations of the contracts concluded. Personal data is processed for intelligence, information research, planning, statistics, member satisfaction studies, security, providing better and reliable services to you, and ensuring the continuity of these services without interruption.<br/><br>
+  
+  The legal basis for the collection of personal data is to fulfill the legal obligations of the İYTE Software Community as a community within the scope of Turkish Republic laws, Ministry of National Education regulations, and to ensure the continuity of the relationships established or to be established with members, instructors, subcontractors, and subcontractors during educational and event activities.<br/><br>
+  
+  <b>Method of collecting personal data:</b></br></br>
+  <b>Your personal data is collected by</b></br></br>
+  the Board of Directors, during pre-registration and/or final registration to the community, areas where members and instructors log in with their special passwords on the community's website named <b>www.iyteyazilim.com</b>, areas filled out for training and events organized throughout the year, emails sent by members, instructors, sponsors, and donors to the community, and computer programs and applications used under the names of the Member Registration System, Education Management System, Event Management System.<br/><br>
+  
+  <b>Personal Data collected by İYTE Software Community from third parties;</b></br></br>
+  As the İYTE Software Community, we may collect all or some of your personal data from software teams that write our computer programs/applications and from our subcontractors providing catering and cleaning services for events mentioned above. Personal data may be transferred to individuals/institutions, including sponsors, instructors, and other third parties who are managers of the community and the institute.<br/><br>
+  
+  <b>Storage and Security of Personal Data by İYTE Software Community and Storage Period;</b></br></br>
+  İYTE Software Community will take necessary security measures and technical/administrative measures to prevent the illegal processing and unauthorized access of your personal data. Personal data that must be stored indefinitely according to Turkish laws and Ministry of National Education regulations will be stored indefinitely by the Community. Personal data other than those required to be stored indefinitely will be destroyed within 1 (one) year after the student leaves the Community.<br/><br>
+  
+  <b>Cookie policy and personal data collected with cookies and applications;</b></br></br>
+  İYTE Software Community's website, <b>www.iyteyazilim.com</b>, only collects information about your browser's language through cookies. Apart from this, we do not currently collect any of your personal data with the cookies we use. However, we would like to note that if the cookies we use change in the future, our cookie policy and, therefore, our obligation to inform may change.<br/><br>
+  
+  <b>Your Rights under Article 11 of the Law;</b></br></br>
+  By applying to the Community, you have the right to <b>a)</b> learn whether your personal data is being processed, <b>b)</b> request information if your personal data has been processed, <b>c)</b> learn the purpose of processing your personal data and whether it is used for its intended purpose, <b>d)</b> know the third parties to whom your personal data is transferred domestically or abroad, <b>e)</b> request correction if your personal data is incomplete or incorrectly processed, <b>f)</b> request the deletion or destruction of your personal data within the framework of the conditions specified in Article 7 of the Law, <b>g)</b> object to the occurrence of a result against you due to the exclusive analysis of your personal data by automated systems, and <b>h)</b> request the remedy of damages in case you suffer damage due to the unlawful processing of your personal data.<br/><br>
+  Your rights can be exercised as of the effective date of the regulation, October 7, 2016, and the Community reserves the right to request the expenses to be incurred by us, according to the tariff specified in Article 13 of the Law on "Application to the data controller," to fulfill your requests.<br/><br>
+  In cases where processing personal data does not require explicit consent, İYTE Software Community has the right to process personal data without obtaining explicit consent in cases such as being clearly stipulated in the laws, being directly related to the establishment or performance of a contract, being necessary for the fulfillment of the legal obligations of the data controller İYTE Software Community, being made public by the data subject, being necessary for the establishment, exercise or protection of a right, processing of personal data for the legitimate interests of İYTE Software Community, provided that it does not harm the fundamental rights and freedoms of the data subject.<br/><br>
+  <b>İYTE Software Community</b> may update the content of this information letter within the scope of the obligation to inform about the protection of personal data and make additional explanations, taking into account changes in the legislation. In this context, we recommend that you visit our website from time to time and carefully read the information we have prepared regarding the Protection of Personal Data Law.`
 }
 
 export default data;
