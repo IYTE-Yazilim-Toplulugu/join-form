@@ -374,7 +374,9 @@ export default function Home() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Lütfen yöneticilerimizle aşağıdaki linkten iletişime geçiniz.
+                Bilgilerinizle tekrar üye olmayı deneyiniz. Karşınıza sertifika alma ekranı gelecektir.
+                Girdiğiniz zaman sertifikanız otomatik olarak indirilecektir.
+                Sorunun devamı halinde yöneticilerimizle aşağıdaki linkten iletişime geçiniz.
                 <br />
                 <a className="font-bold" href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
               </Typography>

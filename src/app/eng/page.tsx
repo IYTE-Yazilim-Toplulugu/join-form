@@ -375,7 +375,9 @@ export default function Home() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Please contact our administrators using the link below.
+                Try to sign up again with your information. You will see the certificate download screen.
+                Once you enter, your certificate will be downloaded automatically.
+                If the problem persists, please contact our administrators via the link below.
                 <br />
                 <a className="font-bold" href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
               </Typography>

@@ -115,7 +115,7 @@ export default function Home() {
             <ChevronRightIcon />
           </div>
         </a>
-        <h2 className="font-bold text-lg mt-5">Encountered a problem?</h2>
+        <h2 className="font-bold text-lg mt-5">Bir sorunla mı karşılaştınız?</h2>
         
         <div className="mt-3 mb-10 relative z-0">
           <Accordion sx={{ position: "relative", zIndex: 0 }}>
@@ -164,7 +164,9 @@ export default function Home() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Lütfen yöneticilerimizle aşağıdaki linkten iletişime geçiniz.
+                Bilgilerinizle tekrar üye olmayı deneyiniz. Karşınıza sertifika alma ekranı gelecektir.
+                Girdiğiniz zaman sertifikanız otomatik olarak indirilecektir.
+                Sorunun devamı halinde yöneticilerimizle aşağıdaki linkten iletişime geçiniz.
               <br />
               <a className="font-bold" href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
             </Typography>
