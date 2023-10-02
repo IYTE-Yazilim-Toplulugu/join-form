@@ -21,6 +21,9 @@ export default function GeneratePdf(name) {
         if (element == "ğ") {
             element = "g"
         }
+        if (element == "ı") {
+            element = "i"
+        }
         newName += element;
     }
 
