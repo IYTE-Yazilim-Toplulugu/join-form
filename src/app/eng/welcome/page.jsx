@@ -60,7 +60,7 @@ export default function Home() {
   return (
     <main>
 
-      <Image src={bg} className='w-full pointer-events-none' />
+      <Image src={bg} className='w-full pointer-events-none' alt="image" />
 
 
       
@@ -79,7 +79,7 @@ export default function Home() {
         
         <a href="https://discord.gg/657xSPQp5C/" target="_blank" className="discord cursor-pointer p-4 rounded-lg flex justify-between items-center shadow-md shadow-black/20 mt-24 mb-3">
           <div className="flex justify-start items-center text-white gap-2">
-          <Image src={DiscordIcon} className='w-8 pointer-events-none' />
+          <Image src={DiscordIcon} className='w-8 pointer-events-none' alt="image" />
             <p className="font-bold">Discord</p>
           </div>
           <div className="flex justify-end items-center text-white gap-2">

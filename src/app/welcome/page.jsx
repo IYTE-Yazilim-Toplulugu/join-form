@@ -59,7 +59,7 @@ export default function Home() {
 
   return (
     <main>
-      <Image src={bg} className='w-full pointer-events-none' />
+      <Image src={bg} alt="image" className='w-full pointer-events-none' />
 
 
       

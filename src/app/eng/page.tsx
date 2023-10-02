@@ -255,7 +255,7 @@ export default function Home() {
         }
       </Modal>
 
-      <Image src={bg} className='w-full pointer-events-none' alt="" />
+      <Image src={bg} className='w-full pointer-events-none' alt="image" />
 
       <div className='flex flex-col px-8 text-black'>
         <form onSubmit={onSubmit} className='flex flex-col gap-4 -mt-16'>
