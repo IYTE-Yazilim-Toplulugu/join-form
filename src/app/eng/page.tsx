@@ -359,7 +359,7 @@ export default function Home() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Please make sure you're not blocking pop-ups then try registering again with your information again.
+                Please make sure you are not blocking pop-ups then try registering again with your information again.
                 The system will automatically add you to the WhatsApp group. If the problem persists, please contact the administrators.
                 <br />
                 <a className="font-bold" href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>

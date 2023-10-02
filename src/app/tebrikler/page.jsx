@@ -151,7 +151,7 @@ export default function Home() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Pop-up'ları engellemediğinizden emin olduktan sonra bilgilerinizle tekrar üye olmayı deneyiniz.
+              Pop-upları engellemediğinizden emin olduktan sonra bilgilerinizle tekrar üye olmayı deneyiniz.
               Otomatik olarak sistem WhatsApp grubuna atacaktır. Sorunun devam etmesi halinde yöneticilerle iletişime geçiniz.
               <br />
               <a className="font-bold" href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
