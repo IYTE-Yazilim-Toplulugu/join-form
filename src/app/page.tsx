@@ -75,7 +75,7 @@ export default function Home() {
     const school = "İzmir Yüksek Teknoloji Enstitüsü";
 
 
-    await axios.post("http://localhost:5000/api/members/newMember", {
+    await axios.post("https://yazilim-server.azurewebsites.net/api/members/newMember", {
       "school_number": school_number,
       "name": name,
       "phone": phone,
