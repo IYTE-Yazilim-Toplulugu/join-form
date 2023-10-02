@@ -130,7 +130,7 @@ export default function Home() {
             <Typography>
               Lütfen yöneticilerimizle aşağıdaki linkten iletişime geçiniz.
               <br />
-              <a href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
+              <a className="font-bold" href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
             </Typography>
 
           </AccordionDetails>
@@ -146,10 +146,10 @@ export default function Home() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Bilgilerinizle tekrar üye olmayı deneyiniz. Otomatik olarak sistem WhatsApp grubuna atacaktır.
-              Sorunun devam etmesi halinde yöneticilerle iletişime geçiniz.
+              Pop-up'ları engellemediğinizden emin olduktan sonra bilgilerinizle tekrar üye olmayı deneyiniz.
+              Otomatik olarak sistem WhatsApp grubuna atacaktır. Sorunun devam etmesi halinde yöneticilerle iletişime geçiniz.
               <br />
-              <a href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
+              <a className="font-bold" href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -166,7 +166,7 @@ export default function Home() {
             <Typography>
               Lütfen yöneticilerimizle aşağıdaki linkten iletişime geçiniz.
               <br />
-              <a href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
+              <a className="font-bold" href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -184,7 +184,7 @@ export default function Home() {
               Belgeyi indirerek yüklemeyi deneyiniz.
               Sorunun devam etmesi halinde yöneticilerle iletişime geçiniz.
               <br />
-              <a href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
+              <a className="font-bold" href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
             </Typography>
           </AccordionDetails>
         </Accordion>

@@ -69,21 +69,21 @@ export default function Home() {
       "department": department,
       "school": school
     })
-    .then((res) => {
-      console.log(res.status);
-      if (res.status == 201) {
+      .then((res) => {
         console.log(res.status);
-        setUserExist(true);
-      }
-      else {
-        setTimeout(() => {
-          setComplete(true);
-        }, 1500);
-      }
-    })
-    .catch((err) => {
-      setError(true);
-    });
+        if (res.status == 201) {
+          console.log(res.status);
+          setUserExist(true);
+        }
+        else {
+          setTimeout(() => {
+            setComplete(true);
+          }, 1500);
+        }
+      })
+      .catch((err) => {
+        setError(true);
+      });
   }
 
   useEffect(() => {
@@ -196,62 +196,62 @@ export default function Home() {
                 </div>
               </Box>
             ) :
-            userExist ? 
-          (
-            <Box sx={style}>
-              <div className="flex flex-col justify-center items-center px-4">  
-                <p className="mt-4 text-lg font-bold mb-2 text-center">You Have a Membership Registration</p>
-                <p className="text-sm max-w-[350px] text-center">Community events and announcements are made through our WhatsApp groups. If you are not in the WhatsApp group, you can enter the group by pressing the button below. If you want to get your certificate, you can reach it by clicking the Go to Certificate Page button.</p>
-                <p className="text-xs max-w-[350px] text-center mt-2">NOTE: After entering the WhatsApp group, you will be automatically directed to the Certificate page.</p>
-                <div className="flex flex-col gap-3 w-full items-center mt-4">
-                  <button onClick={() => {
-                    setComplete(true);
-                  }} className="py-2 w-full max-w-xs bg-green-600 rounded-lg text-white">Join WhatsApp Group</button>
-                  <button onClick={() => {
-                    router.push("/eng/welcome")
-                  }} className="py-2 w-full max-w-xs bg-yellow-500 rounded-lg text-white">Go to Certificate Page</button>
-                  <button onClick={() => {
-                    setLoading(false);
-                    setUserExist(false);
-                  }} className="py-2 w-full max-w-xs rounded-lg">Exit</button>
-                </div>
-              </div>
-            </Box>
-          ) :
-          error ? 
-          (
-            <Box sx={style}>
-              <div className="flex flex-col justify-center items-center px-4">
-                <p className="text-[64px] font-bold text-center mt-4">ERROR</p>
-                <p className="text-sm max-w-[300px] text-center">The system is not currently working or a momentary error occurs. Try again, if you encounter the problem again, please inform the administrators.</p>
-                <div className="mt-5 flex flex-col items-center">
-                  <p>yazilim@iyte.edu.tr</p>
-                  <a className="underline text-blue-700 mt-2" href="https://card.iyteyazilim.com/" target="_blank" rel="noopener noreferrer">Managers</a>
-                </div>
+            userExist ?
+              (
+                <Box sx={style}>
+                  <div className="flex flex-col justify-center items-center px-4">
+                    <p className="mt-4 text-lg font-bold mb-2 text-center">You Have a Membership Registration</p>
+                    <p className="text-sm max-w-[350px] text-center">Community events and announcements are made through our WhatsApp groups. If you are not in the WhatsApp group, you can enter the group by pressing the button below. If you want to get your certificate, you can reach it by clicking the Go to Certificate Page button.</p>
+                    <p className="text-xs max-w-[350px] text-center mt-2">NOTE: After entering the WhatsApp group, you will be automatically directed to the Certificate page.</p>
+                    <div className="flex flex-col gap-3 w-full items-center mt-4">
+                      <button onClick={() => {
+                        setComplete(true);
+                      }} className="py-2 w-full max-w-xs bg-green-600 rounded-lg text-white">Join WhatsApp Group</button>
+                      <button onClick={() => {
+                        router.push("/eng/welcome")
+                      }} className="py-2 w-full max-w-xs bg-yellow-500 rounded-lg text-white">Go to Certificate Page</button>
+                      <button onClick={() => {
+                        setLoading(false);
+                        setUserExist(false);
+                      }} className="py-2 w-full max-w-xs rounded-lg">Exit</button>
+                    </div>
+                  </div>
+                </Box>
+              ) :
+              error ?
+                (
+                  <Box sx={style}>
+                    <div className="flex flex-col justify-center items-center px-4">
+                      <p className="text-[64px] font-bold text-center mt-4">ERROR</p>
+                      <p className="text-sm max-w-[300px] text-center">The system is not currently working or a momentary error occurs. Try again, if you encounter the problem again, please inform the administrators.</p>
+                      <div className="mt-5 flex flex-col items-center">
+                        <p>yazilim@iyte.edu.tr</p>
+                        <a className="underline text-blue-700 mt-2" href="https://card.iyteyazilim.com/" target="_blank" rel="noopener noreferrer">Managers</a>
+                      </div>
 
-                <button onClick={() => {
-                    setLoading(false);
-                    setError(false);
-                  }} className="py-2 w-full max-w-xs rounded-lg mt-4">Exit</button>
-              </div>
-            </Box>
-          ) :
-          (
-            <Box sx={style}>
-              <div className="flex flex-col justify-center items-center px-4">
-              <Grid
-                height="90"
-                width="90"
-                color="#FEA236"
-                wrapperStyle={{}}
-                wrapperClass=""
-                visible={true}
-                ariaLabel='circles-with-bar-loading'
-              />
-              <p className="mt-6">Registration Process is in Progress</p>
-              </div>
-            </Box>
-          )
+                      <button onClick={() => {
+                        setLoading(false);
+                        setError(false);
+                      }} className="py-2 w-full max-w-xs rounded-lg mt-4">Exit</button>
+                    </div>
+                  </Box>
+                ) :
+                (
+                  <Box sx={style}>
+                    <div className="flex flex-col justify-center items-center px-4">
+                      <Grid
+                        height="90"
+                        width="90"
+                        color="#FEA236"
+                        wrapperStyle={{}}
+                        wrapperClass=""
+                        visible={true}
+                        ariaLabel='circles-with-bar-loading'
+                      />
+                      <p className="mt-6">Registration Process is in Progress</p>
+                    </div>
+                  </Box>
+                )
         }
       </Modal>
 
@@ -342,7 +342,7 @@ export default function Home() {
               <Typography>
                 Please contact our administrators using the link below.
                 <br />
-                <a href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
+                <a className="font-bold" href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -357,10 +357,10 @@ export default function Home() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Please try registering again with your information. The system will automatically add you to the WhatsApp group.
-                If the problem persists, please contact the administrators.
+                Please make sure you're not blocking pop-ups then try registering again with your information again.
+                The system will automatically add you to the WhatsApp group. If the problem persists, please contact the administrators.
                 <br />
-                <a href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
+                <a className="font-bold" href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -377,7 +377,7 @@ export default function Home() {
               <Typography>
                 Please contact our administrators using the link below.
                 <br />
-                <a href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
+                <a className="font-bold" href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -395,7 +395,7 @@ export default function Home() {
                 Try downloading the document and uploading it again.
                 If the issue persists, please contact the administrators.
                 <br />
-                <a href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
+                <a className="font-bold" href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -427,7 +427,7 @@ export default function Home() {
             <AccordionDetails>
               <Typography>
                 Our Non-Institute Registration System is under construction.
-                You can become a member of the IYTE Software Community when the system is activated by following our Instagram account.
+                Follow our Instagram account to be sure to be informed when system is activated.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -458,8 +458,7 @@ export default function Home() {
             <AccordionDetails>
               <Typography>
                 Our Non-Institute Registration System is under construction.
-                You can become a member of the IYTE Software Community when the system is activated by following our Instagram account.
-
+                Follow our Instagram account to be sure to be informed when system is activated.
               </Typography>
             </AccordionDetails>
           </Accordion>

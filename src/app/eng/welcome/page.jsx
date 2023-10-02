@@ -135,7 +135,7 @@ export default function Home() {
               <Typography>
                 Please contact our administrators using the link below.
                 <br />
-                <a href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
+                <a className="font-bold" href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -146,14 +146,14 @@ export default function Home() {
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
-              <Typography>I Could not Join  the WhatsApp Group</Typography>
+              <Typography>I Could not Join the WhatsApp Group</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Please try registering again with your information. The system will automatically add you to the WhatsApp group.
-                If the problem persists, please contact the administrators.
+                Please make sure you're not blocking pop-ups then try registering again with your information again.
+                The system will automatically add you to the WhatsApp group. If the problem persists, please contact the administrators.
                 <br />
-                <a href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
+                <a className="font-bold" href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -170,7 +170,7 @@ export default function Home() {
               <Typography>
                 Please contact our administrators using the link below.
                 <br />
-                <a href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
+                <a className="font-bold" href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -188,7 +188,7 @@ export default function Home() {
                 Try downloading the document and uploading it again.
                 If the issue persists, please contact the administrators.
                 <br />
-                <a href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
+                <a className="font-bold" href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -220,7 +220,7 @@ export default function Home() {
             <AccordionDetails>
               <Typography>
                 Our Non-Institute Registration System is under construction.
-                You can become a member of the IYTE Software Community when the system is activated by following our Instagram account.
+                Follow our Instagram account to be sure to be informed when system is activated.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -251,7 +251,7 @@ export default function Home() {
             <AccordionDetails>
               <Typography>
                 Our Non-Institute Registration System is under construction.
-                You can become a member of the IYTE Software Community when the system is activated by following our Instagram account.
+                Follow our Instagram account to be sure to be informed when system is activated.
               </Typography>
             </AccordionDetails>
           </Accordion>
