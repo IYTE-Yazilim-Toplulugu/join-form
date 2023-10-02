@@ -66,6 +66,8 @@ export default function Home() {
     setLoading(true);
 
     const formData = new FormData(event.currentTarget);
+    
+    localStorage.setItem("name", formData.get("name").toString());
 
     const school_number = formData.get("school_number");
     const name = formData.get("name");
@@ -108,7 +110,7 @@ export default function Home() {
       setTimeout(() => {
         window.open("https://chat.whatsapp.com/GGXEVUKPtyqKgq5y7DzgsE", "_blank")
       }, 750);
-      setTimeout(() => router.push("/welcome"), 1000);
+      setTimeout(() => router.push("/tebrikler"), 1000);
     }
   }, [counter, complete, router])
 
@@ -206,7 +208,7 @@ export default function Home() {
                         setComplete(true);
                       }} className="py-2 w-full max-w-xs bg-green-600 rounded-lg text-white">WhatsApp Grubuna Gir</button>
                       <button onClick={() => {
-                        router.push("/eng/welcome")
+                        router.push("/tebrikler")
                       }} className="py-2 w-full max-w-xs bg-yellow-500 rounded-lg text-white">Sertifika Sayfasına Git</button>
                       <button onClick={() => {
                         setLoading(false);

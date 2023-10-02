@@ -19,7 +19,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import DownloadIcon from '@mui/icons-material/Download';
 
 import DiscordIcon from '../../../assets/image/discord.svg';
-import bg from "../../../assets/image/topEng.svg";
+import bg from "../../../assets/image/welcome.svg";
 
 
 import Box from '@mui/material/Box';
@@ -66,18 +66,7 @@ export default function Home() {
       
 
       <div className='flex flex-col px-8 text-black'>
-        <a href="" target="_blank" className="download cursor-pointer p-4 rounded-lg flex justify-between items-center shadow-md shadow-black/20 mt-24 mb-3">
-          <div className="flex justify-start items-center text-white gap-2">
-            <p className="font-bold">Download</p>
-          </div>
-          <div className="flex justify-end items-center text-white gap-2">
-            <p className="text-xs"></p>
-            <DownloadIcon />
-          </div>
-        </a>
-        
-        
-        <a href="https://discord.gg/657xSPQp5C/" target="_blank" className="discord cursor-pointer p-4 rounded-lg flex justify-between items-center shadow-md shadow-black/20 mt-24 mb-3">
+        <a href="https://discord.gg/657xSPQp5C/" target="_blank" className="discord cursor-pointer p-4 rounded-lg flex justify-between items-center shadow-md shadow-black/20 -mt-12 mb-3">
           <div className="flex justify-start items-center text-white gap-2">
           <Image src={DiscordIcon} className='w-8 pointer-events-none' alt="image" />
             <p className="font-bold">Discord</p>
