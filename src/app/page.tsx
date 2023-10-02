@@ -110,7 +110,7 @@ export default function Home() {
       }, 750);
       setTimeout(() => router.push("/welcome"), 1000);
     }
-  }, [counter, complete])
+  }, [counter, complete, router])
 
   return (
     <div>
@@ -387,7 +387,7 @@ export default function Home() {
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
-              <Typography>Sertifikamı Linkedin'e Yükleyemedim</Typography>
+              <Typography>Sertifikamı Linkedine Yükleyemedim</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>

@@ -62,8 +62,6 @@ export default function Home() {
       <Image src={bg} alt="image" className='w-full pointer-events-none' />
 
 
-      
-
       <div className='flex flex-col px-8 text-black'>
         <a href="" target="_blank" className="download cursor-pointer p-4 rounded-lg flex justify-between items-center shadow-md shadow-black/20 mt-24 mb-3">
           <div className="flex justify-start items-center text-white gap-2">
@@ -76,7 +74,7 @@ export default function Home() {
         </a>
         <a href="https://discord.gg/657xSPQp5C/" target="_blank" className="discord cursor-pointer p-4 rounded-lg flex justify-between items-center shadow-md shadow-black/20 mt-24 mb-3">
           <div className="flex justify-start items-center text-white gap-2">
-          <Image src={DiscordIcon} className='w-8 pointer-events-none' />
+          <Image alt="image" src={DiscordIcon} className='w-8 pointer-events-none' />
             <p className="font-bold">Discord</p>
           </div>
           <div className="flex justify-end items-center text-white gap-2">
@@ -179,7 +177,7 @@ export default function Home() {
             aria-controls="panel2a-content"
             id="panel2a-header"
           >
-            <Typography>Sertifikamı Linkedin'e Yükleyemedim</Typography>
+            <Typography>Sertifikamı Linkedine Yükleyemedim</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>

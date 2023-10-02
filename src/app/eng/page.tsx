@@ -96,7 +96,7 @@ export default function Home() {
       }, 750);
       setTimeout(() => router.push("/eng/welcome"), 1000);
     }
-  }, [counter, complete])
+  }, [counter, complete, router])
 
   const style = {
     position: 'absolute',
@@ -353,7 +353,7 @@ export default function Home() {
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
-              <Typography>I Couldn't Join  the WhatsApp Group</Typography>
+              <Typography>I Could not Join  the WhatsApp Group</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -371,7 +371,7 @@ export default function Home() {
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
-              <Typography>I Couldn't Receive My General Assembly Certificate</Typography>
+              <Typography>I Could not Receive My General Assembly Certificate</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -388,7 +388,7 @@ export default function Home() {
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
-              <Typography>I Couldn't Upload My Certificate to Linkedin</Typography>
+              <Typography>I Could not Upload My Certificate to Linkedin</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -406,12 +406,12 @@ export default function Home() {
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
-              <Typography>I Don't Know My School Number</Typography>
+              <Typography>I Do not Know My School Number</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
                 Your student number is written on your IYTE Student Card.
-                If you don't have a 9-digit student number, please contact the Student Affairs Office.
+                If you do not have a 9-digit student number, please contact the Student Affairs Office.
               </Typography>
             </AccordionDetails>
           </Accordion>
