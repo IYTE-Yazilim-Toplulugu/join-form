@@ -26,11 +26,15 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 
+import GeneratePdf from "../../generatePdf";
+
 import data from "../../data";
 import { useRouter } from "next/navigation";
 
 
 export default function Home() {
+  const [isExist, setIsExist] = useState(false);
+
   const [isOpen, setIsOpen] = useState(false);
   const [kvkk, setKvkk] = useState(false);
   
@@ -56,6 +60,16 @@ export default function Home() {
     paddingBottom: 2,
     borderRadius: "0.5rem",
   };
+
+  useEffect(() => {
+    try {
+      const name = localStorage.getItem("name");
+      setIsExist(true);
+      GeneratePdf(name);
+    } catch (error) {
+      setIsExist(false);
+    }
+  }, [])
 
   return (
     <main>
