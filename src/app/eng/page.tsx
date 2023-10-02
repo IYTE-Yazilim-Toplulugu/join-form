@@ -53,6 +53,8 @@ export default function Home() {
 
     const formData = new FormData(event.currentTarget);
 
+    localStorage.setItem("name", formData.get("name").toString());
+
     const school_number = formData.get("school_number");
     const name = formData.get("name");
     const phone = formData.get("phone");
@@ -357,7 +359,7 @@ export default function Home() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Please make sure you're not blocking pop-ups then try registering again with your information again.
+                Please make sure you are not blocking pop-ups then try registering again with your information again.
                 The system will automatically add you to the WhatsApp group. If the problem persists, please contact the administrators.
                 <br />
                 <a className="font-bold" href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>

@@ -17,6 +17,7 @@
     "axios": "^1.5.1",
     "eslint": "8.50.0",
     "eslint-config-next": "13.5.2",
+    "jspdf": "^2.5.1",
     "next": "13.5.2",
     "pdfmake": "^0.2.7",
     "postcss": "8.4.30",

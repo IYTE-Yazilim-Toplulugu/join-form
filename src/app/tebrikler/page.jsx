@@ -19,7 +19,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import DownloadIcon from '@mui/icons-material/Download';
 
 import DiscordIcon from '../../assets/image/discord.svg';
-import bg from "../../assets/image/topEng.svg";
+import bg from "../../assets/image/tebrikler.svg";
 
 
 import Box from '@mui/material/Box';
@@ -29,8 +29,12 @@ import Modal from '@mui/material/Modal';
 import data from "../data";
 import { useRouter } from "next/navigation";
 
+import GeneratePdf from "../generatePdf";
+
 
 export default function Home() {
+  const [isExist, setIsExist] = useState(false);
+
   const [isOpen, setIsOpen] = useState(false);
   const [kvkk, setKvkk] = useState(false);
   
@@ -56,6 +60,16 @@ export default function Home() {
     paddingBottom: 2,
     borderRadius: "0.5rem",
   };
+  
+  useEffect(() => {
+      try {
+        const name = localStorage.getItem("name");
+        setIsExist(true);
+        GeneratePdf(name);
+      } catch (error) {
+        setIsExist(false);
+      }
+  }, [])
 
   return (
     <main>
@@ -63,16 +77,7 @@ export default function Home() {
 
 
       <div className='flex flex-col px-8 text-black'>
-        <a href="" target="_blank" className="download cursor-pointer p-4 rounded-lg flex justify-between items-center shadow-md shadow-black/20 mt-24 mb-3">
-          <div className="flex justify-start items-center text-white gap-2">
-            <p className="font-bold">İndir</p>
-          </div>
-          <div className="flex justify-end items-center text-white gap-2">
-            <p className="text-xs"></p>
-            <DownloadIcon />
-          </div>
-        </a>
-        <a href="https://discord.gg/657xSPQp5C/" target="_blank" className="discord cursor-pointer p-4 rounded-lg flex justify-between items-center shadow-md shadow-black/20 mt-24 mb-3">
+        <a href="https://discord.gg/657xSPQp5C/" target="_blank" className="discord cursor-pointer p-4 rounded-lg flex justify-between items-center shadow-md shadow-black/20 -mt-12 mb-3">
           <div className="flex justify-start items-center text-white gap-2">
           <Image alt="image" src={DiscordIcon} className='w-8 pointer-events-none' />
             <p className="font-bold">Discord</p>
@@ -146,7 +151,7 @@ export default function Home() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Pop-up'ları engellemediğinizden emin olduktan sonra bilgilerinizle tekrar üye olmayı deneyiniz.
+              Pop-upları engellemediğinizden emin olduktan sonra bilgilerinizle tekrar üye olmayı deneyiniz.
               Otomatik olarak sistem WhatsApp grubuna atacaktır. Sorunun devam etmesi halinde yöneticilerle iletişime geçiniz.
               <br />
               <a className="font-bold" href="https://card.iyteyazilim.com/">card.iyteyazilim.com</a>
