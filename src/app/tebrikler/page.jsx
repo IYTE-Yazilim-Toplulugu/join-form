@@ -123,7 +123,7 @@ export default function Home() {
                 <ChevronRightIcon />
               </div>
             </a>
-            <p className="mx-auto text-center text-xs px-10 mt-2 font-light ">NOT: WhatsApp'a yönlendirme işlemi pop-up özelliğinizin kapalı olması nedeniyle engellenmiş olabilir. Tüm duyurularımız ve ekiplerimiz WhatsApp grubumuzdadır. Mutlaka WhatsApp grubuna giriniz.</p>
+            <p className="mx-auto text-center text-xs px-10 mt-2 font-light ">NOT: WhatsAppa yönlendirme işlemi pop-up özelliğinizin kapalı olması nedeniyle engellenmiş olabilir. Tüm duyurularımız ve ekiplerimiz WhatsApp grubumuzdadır. Mutlaka WhatsApp grubuna giriniz.</p>
           </div>
         ) : null
       }
