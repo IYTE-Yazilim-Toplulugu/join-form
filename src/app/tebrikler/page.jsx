@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from 'next/image';
 
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -17,6 +17,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import LanguageIcon from '@mui/icons-material/Language';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import DownloadIcon from '@mui/icons-material/Download';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 import DiscordIcon from '../../assets/image/discord.svg';
 import bg from "../../assets/image/tebrikler.svg";
@@ -30,7 +31,7 @@ import data from "../data";
 import { useRouter } from "next/navigation";
 
 import GeneratePdf from "../generatePdf";
-
+import axios from "axios";
 
 export default function Home() {
   const [isExist, setIsExist] = useState(false);
@@ -61,13 +62,37 @@ export default function Home() {
     borderRadius: "0.5rem",
   };
   
+
+  const iframeRef = useRef();
+  const [showIframe, setShowIframe] = useState(false);
+  const [memberName, setName] = useState();
   useEffect(() => {
       try {
         const name = localStorage.getItem("name");
+        // const school_number = localStorage.getItem("school_number");
+
+        // await axios.post("https://yazilim-server.azurewebsites.net/api/members/checkMember", {"name": name, "school_number": school_number})
+        // .then((res) => {
+        //   console.log(res.status);
+        //   if (res.status == 200) {
+        //     console.log(res.status);
+        //   }
+        // })
+
+        setName(name);
         setIsExist(true);
-        GeneratePdf(name);
+        const pdfBlob = GeneratePdf(name, "output");
+        if (pdfBlob) {
+          const objectURL = URL.createObjectURL(pdfBlob);
+          iframeRef.current.src = objectURL;
+          setShowIframe(true);
+          return () => {
+            URL.revokeObjectURL(objectURL);
+          };
+        }
       } catch (error) {
         setIsExist(false);
+        setShowIframe(false);
       }
   }, [])
 
@@ -75,9 +100,37 @@ export default function Home() {
     <main>
       <Image src={bg} alt="image" className='w-full pointer-events-none' />
 
+      <iframe ref={iframeRef} title="PDF Viewer" className={`mx-auto ${showIframe ? "-mt-20" : null}`} type="application/pdf" height={showIframe ? "300px" : "0px"} width="90%" />
 
-      <div className='flex flex-col px-8 text-black'>
-        <a href="https://discord.gg/657xSPQp5C/" target="_blank" className="discord cursor-pointer p-4 rounded-lg flex justify-between items-center shadow-md shadow-black/20 -mt-12 mb-3">
+      {
+        showIframe ? (
+          <div className="flex justify-center mt-3">
+            <button type="button" onClick={() => GeneratePdf(memberName, "save")} className="py-2 font-bold px-12 bg-orange-400 rounded-lg"><DownloadIcon /> Sertifikanı İndir</button>
+          </div>
+        ) : null
+      }
+
+      {
+        showIframe ? (
+          <div className="flex flex-col px-8 text-black mt-8">
+            <a href="https://chat.whatsapp.com/GGXEVUKPtyqKgq5y7DzgsE" target="_blank" className="wp cursor-pointer p-4 rounded-lg flex justify-between items-center shadow-md shadow-black/20  mb-3">
+              <div className="flex justify-start items-center text-white gap-2">
+                <WhatsAppIcon sx={{ fontSize: "36px"}} />
+                <p className="font-bold text-center">WhatsApp Grubumuza Girin</p>
+              </div>
+              <div className="flex justify-end items-center text-white gap-2">
+                {/* <p className="text-xs">@iyte_yazilim</p> */}
+                <ChevronRightIcon />
+              </div>
+            </a>
+            <p className="mx-auto text-center text-xs px-10 mt-2 font-light ">NOT: WhatsApp'a yönlendirme işlemi pop-up özelliğinizin kapalı olması nedeniyle engellenmiş olabilir. Tüm duyurularımız ve ekiplerimiz WhatsApp grubumuzdadır. Mutlaka WhatsApp grubuna giriniz.</p>
+          </div>
+        ) : null
+      }
+
+      <div className={`flex flex-col px-8 text-black ${showIframe ? "mt-12" : "-mt-20"}`}>
+
+        <a href="https://discord.gg/657xSPQp5C/" target="_blank" className="discord cursor-pointer p-4 rounded-lg flex justify-between items-center shadow-md shadow-black/20 mt-3 mb-3">
           <div className="flex justify-start items-center text-white gap-2">
           <Image alt="image" src={DiscordIcon} className='w-8 pointer-events-none' />
             <p className="font-bold">Discord</p>

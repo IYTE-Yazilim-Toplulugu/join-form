@@ -68,6 +68,7 @@ export default function Home() {
     const formData = new FormData(event.currentTarget);
     
     localStorage.setItem("name", formData.get("name").toString());
+    localStorage.setItem("school_number", formData.get("school_number").toString());
 
     const school_number = formData.get("school_number");
     const name = formData.get("name");

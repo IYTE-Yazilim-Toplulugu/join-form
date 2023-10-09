@@ -1,6 +1,6 @@
 import { jsPDF } from "jspdf";
 
-export default function GeneratePdf(name) {
+export default function GeneratePdf(name, req) {
     const doc = new jsPDF({
         orientation: "landscape",
         unit: "in",
@@ -70,5 +70,14 @@ export default function GeneratePdf(name) {
     
     doc.text(text, textX, textY + 0.8);
 
-    doc.save("software_certificate.pdf");
+    switch (req) {
+        case "output":
+            return doc.output('blob');
+            break;
+        case "save":
+            doc.save(`iss_certificate_${name}.pdf`);
+            break;
+        default:
+            break;
+    }
 }
